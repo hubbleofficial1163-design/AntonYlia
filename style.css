@@ -265,7 +265,7 @@ h2 i {
     margin-bottom: 1.5rem;
     padding-bottom: 1.5rem;
     border-bottom: 1px solid rgba(180, 189, 170, 0.5);
-    padding-right: 70px; /* ОТСТУП СПРАВА ДЛЯ ФОТО */
+    padding-right: 0;
 }
 
 .timeline-item:last-child {
@@ -295,37 +295,31 @@ h2 i {
     margin: 0;
 }
 
-.timeline-img {
+/* .timeline-img {
     position: absolute;
-    right: 0;
+    right: 140px; 
     top: 50%;
     transform: translateY(-50%);
-    width: 55px;
-    height: 55px;
+    width: 65px; 
+    height: 65px;
     object-fit: contain;
     display: block;
-}
+} */
 
 /* Для мобильных */
 @media (max-width: 600px) {
-    .timeline-item {
-        padding-right: 55px;
-    }
-    
     .timeline-img {
+        right: 60px;
         width: 45px;
         height: 45px;
     }
 }
 
 @media (max-width: 480px) {
-    .timeline-item {
-        padding-right: 45px;
-    }
-    
     .timeline-img {
-        width: 35px;
-        height: 35px;
+        right: 60px;
+        width: 45px;
+        height: 45px;
     }
 }
 
@@ -1122,4 +1116,448 @@ footer {
         flex-direction: column;
         text-align: center;
     }
+}
+
+/* Большие иконки для новых PNG */
+.timeline-img-large {
+
+    width: 85px;
+    height: 85px;
+}
+
+/* Для мобильных */
+@media (max-width: 600px) {
+    .timeline-img-large {
+        right: 110px;
+        width: 75px;
+        height: 75px;
+    }
+}
+
+@media (max-width: 480px) {
+    .timeline-img-large {
+        right: 110px;
+        width: 65px;
+        height: 65px;
+    }
+}
+
+
+/* Базовый стиль для всех иконок */
+.timeline-img {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    object-fit: contain;
+    display: block;
+}
+
+/* Индивидуальные настройки для каждой иконки */
+.img-sbor {
+    right: 500px;
+    width: 80px;
+    height: 80px;
+}
+
+.img-banket {
+    right: 390px;
+    width: 65px;
+    height: 65px;
+}
+
+.img-dance {
+    right: 420px;
+    width: 90px;
+    height: 90px;
+}
+
+.img-tort {
+    right: 420px;
+    width: 70px;
+    height: 70px;
+}
+
+.img-tanec {
+    right: 350px;
+    width: 75px;
+    height: 75px;
+}
+
+/* Мобильная версия */
+@media (max-width: 600px) {
+    .img-sbor { right: 150px; width: 65px; height: 65px; }
+    .img-banket { right: 60px; width: 50px; height: 50px; }
+    .img-dance { right: 100px; width: 65px; height: 65px; }
+    .img-tort { right: 110px; width: 55px; height: 55px; }
+    .img-tanec { right: 40px; width: 55px; height: 55px; }
+}
+
+
+/* ========== ГОРИЗОНТАЛЬНАЯ ЛЕНТА ПОЖЕЛАНИЙ ========== */
+.wishes-scroll-container {
+    position: relative;
+    margin: 1.5rem 0;
+    overflow-x: auto;
+    overflow-y: hidden;
+    scroll-behavior: smooth;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: thin;
+    scrollbar-color: #879d90 #e0e4d8;
+}
+
+.wishes-scroll-container::-webkit-scrollbar {
+    height: 6px;
+}
+
+.wishes-scroll-container::-webkit-scrollbar-track {
+    background: #e0e4d8;
+    border-radius: 10px;
+}
+
+.wishes-scroll-container::-webkit-scrollbar-thumb {
+    background: #879d90;
+    border-radius: 10px;
+}
+
+.wishes-scroll {
+    display: flex;
+    gap: 1.5rem;
+    padding: 0.5rem 0.2rem 1rem 0.2rem;
+}
+
+.wish-card {
+    flex: 0 0 auto;
+    width: 300px;
+    background: rgba(255, 255, 255, 0.95);
+    border-radius: 16px;
+    padding: 1.8rem 1.5rem;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+    transition: all 0.3s;
+    border: 1px solid rgba(180, 189, 170, 0.3);
+    text-align: center;
+}
+
+.wish-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.12);
+    border-color: rgba(135, 157, 144, 0.5);
+}
+
+.wish-icon {
+    width: 60px;
+    height: 60px;
+    background: linear-gradient(135deg, rgba(135, 157, 144, 0.2), rgba(162, 172, 148, 0.2));
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 1.2rem;
+}
+
+.wish-icon i {
+    font-size: 1.8rem;
+    color: #637257;
+}
+
+.wish-text p {
+    font-size: clamp(0.95rem, 2.2vw, 1.05rem);
+    line-height: 1.5;
+    color: #4a5345;
+    margin: 0;
+    font-style: italic;
+}
+
+.wish-text p strong {
+    font-style: normal;
+    color: #637257;
+}
+
+/* Кнопка подписки */
+.wishes-button {
+    margin-top: 2rem;
+    text-align: center;
+}
+
+.gift-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    background: linear-gradient(to right, #a2ac94, #879d90);
+    color: white;
+    padding: 12px 28px;
+    border-radius: 50px;
+    text-decoration: none;
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(1rem, 2.5vw, 1.2rem);
+    font-weight: 500;
+    transition: all 0.3s;
+    border: none;
+    cursor: pointer;
+}
+
+.gift-link:hover {
+    background: linear-gradient(to right, #879d90, #768b7a);
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(99, 114, 87, 0.2);
+}
+
+/* Стрелки навигации */
+.scroll-arrows {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin: 1rem 0 0;
+}
+
+.scroll-arrow {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: rgba(135, 157, 144, 0.2);
+    border: 1px solid rgba(135, 157, 144, 0.4);
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s;
+    color: #637257;
+}
+
+.scroll-arrow:hover {
+    background: #879d90;
+    border-color: #879d90;
+    color: white;
+}
+
+.scroll-arrow i {
+    font-size: 1rem;
+}
+
+/* Адаптив для мобильных */
+@media (max-width: 768px) {
+    .wish-card {
+        width: 270px;
+        padding: 1.5rem 1.2rem;
+    }
+    
+    .wish-icon {
+        width: 50px;
+        height: 50px;
+    }
+    
+    .wish-icon i {
+        font-size: 1.5rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .wish-card {
+        width: 250px;
+        padding: 1.2rem 1rem;
+    }
+    
+    .scroll-arrow {
+        width: 35px;
+        height: 35px;
+    }
+}
+
+
+/* ========== АЛКОГОЛЬНЫЕ ПРЕДПОЧТЕНИЯ ========== */
+.alcohol-options {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin-top: 0.5rem;
+}
+
+.alcohol-checkbox {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    background: rgba(255, 255, 255, 0.8);
+    padding: 0.6rem 1rem;
+    border-radius: 50px;
+    border: 1px solid rgba(180, 189, 170, 0.5);
+    transition: all 0.3s;
+}
+
+.alcohol-checkbox:hover {
+    background: rgba(135, 157, 144, 0.1);
+    border-color: #879d90;
+}
+
+.alcohol-checkbox input {
+    width: auto;
+    margin-right: 8px;
+    transform: scale(1.1);
+    cursor: pointer;
+}
+
+.alcohol-checkbox span {
+    font-size: clamp(0.9rem, 2.2vw, 1rem);
+    color: #4a5345;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.alcohol-checkbox span i {
+    color: #879d90;
+    font-size: 0.9rem;
+}
+
+/* При выборе "Не пью алкоголь" можно подсвечивать */
+.alcohol-checkbox:has(input[value="none"]:checked) {
+    background: rgba(135, 157, 144, 0.15);
+    border-color: #879d90;
+}
+
+@media (max-width: 600px) {
+    .alcohol-options {
+        gap: 0.7rem;
+    }
+    
+    .alcohol-checkbox {
+        padding: 0.5rem 0.8rem;
+    }
+}
+
+/* ========== КАСТОМНЫЕ ЧЕКБОКСЫ ДЛЯ АЛКОГОЛЯ ========== */
+.alcohol-checkbox {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    background: rgba(255, 255, 255, 0.8);
+    padding: 0.6rem 1rem;
+    border-radius: 50px;
+    border: 1px solid rgba(180, 189, 170, 0.5);
+    transition: all 0.3s;
+}
+
+.alcohol-checkbox:hover {
+    background: rgba(135, 157, 144, 0.1);
+    border-color: #879d90;
+}
+
+/* Скрываем стандартный чекбокс */
+.alcohol-checkbox input {
+    position: absolute;
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+/* Создаём кастомный чекбокс */
+.alcohol-checkbox span {
+    position: relative;
+    padding-left: 28px;
+    font-size: clamp(0.9rem, 2.2vw, 1rem);
+    color: #4a5345;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.alcohol-checkbox span i {
+    color: #879d90;
+    font-size: 0.9rem;
+}
+
+/* Кастомный квадратик */
+.alcohol-checkbox span::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 18px;
+    height: 18px;
+    border: 2px solid #a2ac94;
+    border-radius: 4px;
+    background: white;
+    transition: all 0.2s;
+}
+
+/* Галочка при выборе */
+.alcohol-checkbox input:checked + span::before {
+    background: #879d90;
+    border-color: #879d90;
+}
+
+.alcohol-checkbox input:checked + span::after {
+    content: '✓';
+    position: absolute;
+    left: 4px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: white;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+/* Фокус для доступности */
+.alcohol-checkbox input:focus + span::before {
+    box-shadow: 0 0 0 2px rgba(135, 157, 144, 0.3);
+}
+
+/* При выборе "Не пью алкоголь" подсвечиваем */
+.alcohol-checkbox:has(input:checked) {
+    background: rgba(135, 157, 144, 0.15);
+    border-color: #879d90;
+}
+
+@media (max-width: 600px) {
+    .alcohol-options {
+        gap: 0.7rem;
+    }
+    
+    .alcohol-checkbox {
+        padding: 0.5rem 0.8rem;
+    }
+    
+    .alcohol-checkbox span {
+        padding-left: 24px;
+    }
+    
+    .alcohol-checkbox span::before {
+        width: 16px;
+        height: 16px;
+    }
+}
+
+
+/* Убираем синее выделение при нажатии на мобильных */
+button,
+a,
+input,
+select,
+textarea,
+.gift-link,
+.submit-btn,
+.scroll-arrow,
+.calendar-nav,
+.alcohol-checkbox,
+.timeline-img {
+    -webkit-tap-highlight-color: transparent;
+    -webkit-touch-callout: none;
+    outline: none;
+}
+
+/* Дополнительно для кнопок */
+button:focus,
+a:focus,
+input:focus,
+select:focus,
+textarea:focus,
+.gift-link:focus,
+.submit-btn:focus,
+.scroll-arrow:focus,
+.calendar-nav:focus {
+    outline: none;
+}
+
+/* Для элементов, которые могут быть нажаты */
+* {
+    -webkit-tap-highlight-color: transparent;
 }
