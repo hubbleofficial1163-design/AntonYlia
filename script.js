@@ -271,7 +271,7 @@ document.addEventListener('DOMContentLoaded', function() {
                         case 'no': attendanceText = 'не смогу'; break;
                     }
                     
-                    formMessage.textContent = `Благодарим вас, Ваш ответ сохранен.`;
+                    formMessage.textContent = `Благодарим, Ваш ответ сохранен.`;
                     formMessage.style.display = 'block';
                     formMessage.style.backgroundColor = 'rgba(180, 189, 170, 0.3)';
                     formMessage.style.color = '#4a5345';
