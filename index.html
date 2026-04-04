@@ -105,12 +105,13 @@
 
                 <!-- Пожелания (05.jpg растворяется в 04.jpg) -->
         <!-- Пожелания -->
+<!-- Пожелания -->
 <section class="wishes section-bg" 
          style="--bg-image: url('05.jpg'); --prev-bg-image: url('04.jpg');">
     <div class="wishes-content">
         <h2><i class="fas fa-gift"></i> Пожелания</h2>
         
-        <!-- Горизонтальная лента пожеланий -->
+        <!-- Горизонтальная лента пожеланий (без текста про цветы) -->
         <div class="wishes-scroll-container">
             <div class="wishes-scroll">
                 
@@ -120,15 +121,6 @@
                     </div>
                     <div class="wish-text">
                         <p>Лучшим подарком для нас станет ваш вклад в наше свадебное путешествие и обустройство семейного очага</p>
-                    </div>
-                </div>
-                
-                <div class="wish-card">
-                    <div class="wish-icon">
-                        <i class="fas fa-flower"></i>
-                    </div>
-                    <div class="wish-text">
-                        <p>Если вы соберётесь подарить цветы — то лучше сделайте это нам в подписке. Мы не успеем насладиться их красотой, а подписка позволит продлить ещё на чуть дольше ощущение от праздника.</p>
                     </div>
                 </div>
                 
@@ -162,23 +154,22 @@
             </div>
         </div>
         
-        <!-- Стрелки навигации -->
-        <!-- <div class="scroll-arrows">
-            <button class="scroll-arrow scroll-left" id="scrollLeftBtn">
-                <i class="fas fa-chevron-left"></i>
-            </button>
-            <button class="scroll-arrow scroll-right" id="scrollRightBtn">
-                <i class="fas fa-chevron-right"></i>
-            </button>
-        </div> -->
-        
-        <!-- Кнопка подписки под текстом о подписке -->
-        <div class="wishes-button">
-            <a href="https://roz-buket.ru/kopilka-chayko-kuzmina" target="_blank" class="gift-link" id="giftSubscriptionLink">
-                <i class="fas fa-leaf"></i> Подарить подписку
-                <i class="fas fa-arrow-right"></i>
-            </a>
+        <!-- Отдельный блок про цветы с кнопкой -->
+        <div class="flowers-block">
+            <!-- <div class="flowers-icon">
+                <i class="fas fa-flower"></i>
+            </div> -->
+            <div class="flowers-text">
+                <p>Если вы соберётесь подарить цветы — то лучше сделайте это нам в подписке. Мы не успеем насладиться их красотой, а подписка позволит продлить ещё на чуть дольше ощущение от праздника.</p>
+            </div>
+            <div class="flowers-button">
+                <a href="https://roz-buket.ru/kopilka-chayko-kuzmina" target="_blank" class="gift-link" id="giftSubscriptionLink">
+                    <i class="fas fa-leaf"></i> Подарить подписку
+                    <i class="fas fa-arrow-right"></i>
+                </a>
+            </div>
         </div>
+        
     </div>
 </section>
 
@@ -213,6 +204,65 @@
                 </div>
             </div>
         </section>
+
+
+        <!-- Дресс-код -->
+<section class="dresscode-section section-bg" 
+         style="--bg-image: url('06.jpg'); --prev-bg-image: url('05.jpg');">
+    <div class="dresscode-content">
+        <h2><i class="fas fa-user-tie"></i> Дресс-код</h2>
+        <p class="dresscode-intro">Мы будем рады, если вы поддержите цветовую гамму нашего праздника</p>
+        
+        <!-- Цветовые кружки -->
+        <div class="color-palette">
+            <div class="color-circle" style="background-color: #8FBC8F;" title="Мятный">
+                <!-- <span class="color-label">Мятный</span> -->
+            </div>
+            <div class="color-circle" style="background-color: #D4E6C3;" title="Светло-зелёный">
+                <!-- <span class="color-label">Светло-зелёный</span> -->
+            </div>
+            <div class="color-circle" style="background-color: #F5E6D3;" title="Бежевый">
+                <!-- <span class="color-label">Бежевый</span> -->
+            </div>
+            <div class="color-circle" style="background-color: #FFF8DC;" title="Кремовый">
+                <!-- <span class="color-label">Кремовый</span> -->
+            </div>
+            <div class="color-circle" style="background-color: #E8F0E0;" title="Пастельно-зелёный">
+                <!-- <span class="color-label">Пастельно-зелёный</span> -->
+            </div>
+        </div>
+        
+        <!-- Рекомендации по дресс-коду -->
+        <!-- <div class="dresscode-guidelines">
+            <div class="dresscode-item">
+                <i class="fas fa-female"></i>
+                <div class="dresscode-text">
+                    <h4>Для дам</h4>
+                    <p>Элегантные платья, комбинезоны или костюмы в пастельных тонах</p>
+                </div>
+            </div>
+            <div class="dresscode-item">
+                <i class="fas fa-male"></i>
+                <div class="dresscode-text">
+                    <h4>Для мужчин</h4>
+                    <p>Костюмы светлых оттенков, рубашки пастельных цветов</p>
+                </div>
+            </div>
+            <div class="dresscode-item">
+                <i class="fas fa-tshirt"></i>
+                <div class="dresscode-text">
+                    <h4>Аксессуары</h4>
+                    <p>Приветствуются цветочные принты и нежные украшения</p>
+                </div>
+            </div>
+        </div>
+        
+        <div class="dresscode-note">
+            <i class="fas fa-info-circle"></i>
+            <p>Главное — ваш комфорт и хорошее настроение! Мы будем рады видеть вас в любом наряде</p>
+        </div> -->
+    </div>
+</section>
 
 
                 <!-- Локация (04.jpg растворяется в 05.jpg) -->
@@ -257,6 +307,7 @@
 
         <!-- Форма подтверждения (06.jpg растворяется в 05.jpg) -->
 <!-- Форма подтверждения -->
+<!-- Форма подтверждения -->
 <section class="rsvp section-bg" 
          style="--bg-image: url('04.jpg'); --prev-bg-image: url('06.jpg');">
     <div class="rsvp-content">
@@ -280,7 +331,7 @@
                 </div>
             </div>
             
-            <!-- НОВЫЙ БЛОК: Предпочтения по алкоголю -->
+            <!-- БЛОК: Предпочтения по алкоголю -->
             <div class="form-group">
                 <label style="display: block; margin-bottom: 0.8rem; font-weight: 500; color: #4a5345;">
                     <i class="fas fa-wine-bottle"></i> Ваши предпочтения по алкоголю:
@@ -295,8 +346,12 @@
                         <span><i class="fas fa-wine-glass"></i> Красное вино</span>
                     </label>
                     <label class="alcohol-checkbox">
+                        <input type="checkbox" name="alcohol" value="champagne">
+                        <span><i class="fas fa-glass-cheers"></i> Шампанское</span>
+                    </label>
+                    <label class="alcohol-checkbox">
                         <input type="checkbox" name="alcohol" value="cognac">
-                        <span><i class="fas fa-glass-cheers"></i> Коньяк</span>
+                        <span><i class="fas fa-brandy"></i> Коньяк</span>
                     </label>
                     <label class="alcohol-checkbox">
                         <input type="checkbox" name="alcohol" value="vodka">
@@ -306,9 +361,43 @@
                         <input type="checkbox" name="alcohol" value="none">
                         <span><i class="fas fa-leaf"></i> Не пью алкоголь</span>
                     </label>
+                    <label class="alcohol-checkbox alcohol-other">
+                        <input type="checkbox" name="alcohol" value="other" id="alcoholOtherCheckbox">
+                        <span><i class="fas fa-plus-circle"></i> Другое</span>
+                    </label>
+                </div>
+                <div class="other-input-container" id="alcoholOtherContainer" style="display: none; margin-top: 0.8rem;">
+                    <input type="text" id="alcoholOtherText" placeholder="Укажите ваш вариант" style="width: 100%;">
                 </div>
                 <small style="display: block; margin-top: 0.5rem; color: #768b7a; font-size: 0.85rem;">
                     <i class="fas fa-info-circle"></i> Можно выбрать несколько вариантов
+                </small>
+            </div>
+            
+            <!-- НОВЫЙ БЛОК: Предпочтения по еде -->
+            <div class="form-group">
+                <label style="display: block; margin-bottom: 0.8rem; font-weight: 500; color: #4a5345;">
+                    <i class="fas fa-utensils"></i> Ваши предпочтения по еде:
+                </label>
+                <div class="food-options">
+                    <label class="food-checkbox">
+                        <input type="checkbox" name="food" value="no_meat">
+                        <span><i class="fas fa-carrot"></i> Не ем мясо</span>
+                    </label>
+                    <label class="food-checkbox">
+                        <input type="checkbox" name="food" value="no_fish">
+                        <span><i class="fas fa-fish"></i> Не ем рыбу</span>
+                    </label>
+                    <label class="food-checkbox food-other">
+                        <input type="checkbox" name="food" value="other" id="foodOtherCheckbox">
+                        <span><i class="fas fa-pen"></i> Другие особенности</span>
+                    </label>
+                </div>
+                <div class="other-input-container" id="foodOtherContainer" style="display: none; margin-top: 0.8rem;">
+                    <textarea id="foodOtherText" placeholder="Укажите ваши особенности питания (аллергии, непереносимость, диета и т.д.)" rows="2" style="width: 100%;"></textarea>
+                </div>
+                <small style="display: block; margin-top: 0.5rem; color: #768b7a; font-size: 0.85rem;">
+                    <i class="fas fa-info-circle"></i> Пожалуйста, сообщите о любых ограничениях в питании
                 </small>
             </div>
             
@@ -317,7 +406,7 @@
             </div>
             
             <div class="form-note">
-                <p><i class="fas fa-info-circle"></i> Пожалуйста, ответьте до 1 августа 2024 года</p>
+                <p><i class="fas fa-info-circle"></i> Пожалуйста, ответьте до 13 мая 2026 года</p>
             </div>
             
             <button type="submit" class="submit-btn">
