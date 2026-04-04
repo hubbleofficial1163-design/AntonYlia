@@ -48,15 +48,15 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 
     // Обработка кнопки подписки (заглушка)
-    const giftLink = document.getElementById('giftSubscriptionLink');
-    if (giftLink) {
-        giftLink.addEventListener('click', function(e) {
-            e.preventDefault();
-            // TODO: заменить на реальную ссылку на подписку
-            alert('Ссылка на подписку будет добавлена позже. Спасибо!');
-            // window.location.href = 'ВАША_ССЫЛКА_НА_ПОДПИСКУ';
-        });
-    }
+    // const giftLink = document.getElementById('giftSubscriptionLink');
+    // if (giftLink) {
+    //     giftLink.addEventListener('click', function(e) {
+    //         e.preventDefault();
+    //         // TODO: заменить на реальную ссылку на подписку
+    //         // alert('Ссылка на подписку будет добавлена позже. Спасибо!');
+    //         window.location.href = 'https://roz-buket.ru/kopilka-chayko-kuzmina';
+    //     });
+    // }
 
         // ========== КАЛЕНДАРЬ ==========
     function buildCalendar(month, year) {
@@ -155,3 +155,134 @@ document.addEventListener('DOMContentLoaded', function() {
             updateCalendar();
         });
     }
+
+
+    // Обработка формы RSVP
+// Обработка формы RSVP
+const rsvpForm = document.getElementById('rsvpForm');
+const formMessage = document.getElementById('formMessage');
+
+// Показать/скрыть поле "Другое" для алкоголя
+const alcoholOtherCheckbox = document.getElementById('alcoholOtherCheckbox');
+const alcoholOtherContainer = document.getElementById('alcoholOtherContainer');
+
+if (alcoholOtherCheckbox) {
+    alcoholOtherCheckbox.addEventListener('change', function() {
+        alcoholOtherContainer.style.display = this.checked ? 'block' : 'none';
+        if (!this.checked) {
+            document.getElementById('alcoholOtherText').value = '';
+        }
+    });
+}
+
+// Показать/скрыть поле "Другие особенности" для еды
+const foodOtherCheckbox = document.getElementById('foodOtherCheckbox');
+const foodOtherContainer = document.getElementById('foodOtherContainer');
+
+if (foodOtherCheckbox) {
+    foodOtherCheckbox.addEventListener('change', function() {
+        foodOtherContainer.style.display = this.checked ? 'block' : 'none';
+        if (!this.checked) {
+            document.getElementById('foodOtherText').value = '';
+        }
+    });
+}
+
+if (rsvpForm) {
+    rsvpForm.addEventListener('submit', function(e) {
+        e.preventDefault();
+        
+        // Получаем значения формы
+        const name = document.getElementById('name').value;
+        const attendance = document.getElementById('attendance').value;
+        const message = document.getElementById('message').value;
+        
+        // Собираем выбранные алкогольные предпочтения
+        const alcoholCheckboxes = document.querySelectorAll('input[name="alcohol"]:checked');
+        const alcoholPreferences = Array.from(alcoholCheckboxes).map(cb => {
+            const labels = {
+                'white_wine': 'Белое вино',
+                'red_wine': 'Красное вино',
+                'champagne': 'Шампанское',
+                'cognac': 'Коньяк',
+                'vodka': 'Водка',
+                'none': 'Не пью алкоголь',
+                'other': 'Другое'
+            };
+            return labels[cb.value] || cb.value;
+        });
+        
+        // Добавляем текст "Другое" если заполнен
+        const alcoholOtherText = document.getElementById('alcoholOtherText');
+        if (alcoholOtherCheckbox && alcoholOtherCheckbox.checked && alcoholOtherText.value.trim()) {
+            alcoholPreferences.push(`Другое: ${alcoholOtherText.value.trim()}`);
+        }
+        
+        let alcoholText = '';
+        if (alcoholPreferences.length > 0) {
+            alcoholText = `\nПредпочтения по алкоголю: ${alcoholPreferences.join(', ')}`;
+        }
+        
+        // Собираем предпочтения по еде
+        const foodCheckboxes = document.querySelectorAll('input[name="food"]:checked');
+        const foodPreferences = Array.from(foodCheckboxes).map(cb => {
+            const labels = {
+                'no_meat': 'Не ем мясо',
+                'no_fish': 'Не ем рыбу',
+                'other': 'Другие особенности'
+            };
+            return labels[cb.value] || cb.value;
+        });
+        
+        // Добавляем текст "Другие особенности" если заполнен
+        const foodOtherText = document.getElementById('foodOtherText');
+        if (foodOtherCheckbox && foodOtherCheckbox.checked && foodOtherText.value.trim()) {
+            foodPreferences.push(`Особенности питания: ${foodOtherText.value.trim()}`);
+        }
+        
+        let foodText = '';
+        if (foodPreferences.length > 0) {
+            foodText = `\nПредпочтения по еде: ${foodPreferences.join(', ')}`;
+        }
+        
+        // Формируем сообщение
+        let attendanceText = '';
+        switch(attendance) {
+            case 'yes': attendanceText = 'буду'; break;
+            case 'plusone': attendanceText = 'буду с парой'; break;
+            case 'family': attendanceText = 'придём семьёй'; break;
+            case 'no': attendanceText = 'не смогу'; break;
+        }
+        
+        // Показываем сообщение
+        formMessage.textContent = `Благодарим вас, ${name}! Вы ответили, что ${attendanceText}.${alcoholText}${foodText} ${message ? '\nВаше сообщение: ' + message : ''} Мы свяжемся с вами для уточнения деталей.`;
+        formMessage.style.display = 'block';
+        formMessage.style.backgroundColor = 'rgba(180, 189, 170, 0.3)';
+        formMessage.style.color = '#4a5345';
+        formMessage.style.border = '1px solid rgba(162, 172, 148, 0.5)';
+        
+        // Сбрасываем форму
+        rsvpForm.reset();
+        
+        // Сбрасываем чекбоксы
+        document.querySelectorAll('input[name="alcohol"]').forEach(cb => cb.checked = false);
+        document.querySelectorAll('input[name="food"]').forEach(cb => cb.checked = false);
+        
+        // Скрываем поля "Другое"
+        if (alcoholOtherContainer) alcoholOtherContainer.style.display = 'none';
+        if (foodOtherContainer) foodOtherContainer.style.display = 'none';
+        if (alcoholOtherText) alcoholOtherText.value = '';
+        if (foodOtherText) foodOtherText.value = '';
+        
+        // Плавная прокрутка к сообщению
+        formMessage.scrollIntoView({ 
+            behavior: 'smooth',
+            block: 'center'
+        });
+        
+        // Скрываем сообщение через 6 секунд
+        setTimeout(() => {
+            formMessage.style.display = 'none';
+        }, 6000);
+    });
+}
