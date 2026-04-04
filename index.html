@@ -62,6 +62,7 @@
                         <h3>Сбор гостей</h3>
                         <p>Встреча гостей</p>
                     </div>
+                    <img src="sbor.png" alt="Сбор" class="timeline-img img-sbor">
                 </div>
                 
                 <div class="timeline-item">
@@ -70,7 +71,7 @@
                         <h3>Начало банкета</h3>
                         <p>Время вкусной еды и напитков</p>
                     </div>
-                    <img src="banket.png" alt="Банкет" class="timeline-img">
+                    <img src="banket.png" alt="Банкет" class="timeline-img img-banket">
                 </div>
                 
                 <div class="timeline-item">
@@ -79,6 +80,7 @@
                         <h3>Первый танец</h3>
                         <p>Трогательный момент</p>
                     </div>
+                    <img src="dance.png" alt="Танец" class="timeline-img img-dance">
                 </div>
                 
                 <div class="timeline-item">
@@ -87,53 +89,98 @@
                         <h3>Торт</h3>
                         <p>Самый сладкий момент</p>
                     </div>
-                    <img src="tort.png" alt="Торт" class="timeline-img">
+                    <img src="tort.png" alt="Торт" class="timeline-img img-tort">
                 </div>
                 
                 <div class="timeline-item">
                     <div class="timeline-time">22:00</div>
                     <div class="timeline-content">
                         <h3>Завершение вечера и танцы</h3>
-                        <p>К сожалению, даже такие радостные дни подходят к концу</p>
+                        <p>К сожалению, даже такие <br> радостные дни подходят к концу</p>
                     </div>
-                    <img src="tanec.png" alt="Танцы" class="timeline-img">
+                    <img src="tanec.png" alt="Танцы" class="timeline-img img-tanec">
                 </div>
             </div>
         </section>
 
                 <!-- Пожелания (05.jpg растворяется в 04.jpg) -->
-        <section class="wishes section-bg" 
-                 style="--bg-image: url('05.jpg'); --prev-bg-image: url('04.jpg');">
-            <div class="wishes-content">
-                <h2><i class="fas fa-gift"></i> Пожелания</h2>
+        <!-- Пожелания -->
+<section class="wishes section-bg" 
+         style="--bg-image: url('05.jpg'); --prev-bg-image: url('04.jpg');">
+    <div class="wishes-content">
+        <h2><i class="fas fa-gift"></i> Пожелания</h2>
+        
+        <!-- Горизонтальная лента пожеланий -->
+        <div class="wishes-scroll-container">
+            <div class="wishes-scroll">
                 
-                <div class="wishes-quote">
-                    <i class="fas fa-quote-left"></i>
-                    <p>Лучшим подарком для нас станет ваш вклад в наше свадебное путешествие и обустройство семейного очага</p>
-                    <i class="fas fa-quote-right"></i>
-                </div>
-                
-                <div class="wishes-text">
-                    <p>Если вы соберётесь подарить цветы — то лучше сделайте это нам в подписке. Мы не успеем насладиться их красотой, а подписка позволит продлить ещё на чуть дольше ощущение от праздника.</p>
-                </div>
-
-                <!-- Блок про детей -->
-                <div class="children-notice">
-                    <i class="fas fa-baby-carriage"></i>
-                    <div class="children-text">
-                        <p><strong>Дорогие гости!</strong> Мы очень любим детей, но формат нашего праздника, к сожалению, не позволит разделить его с маленькими гостями. Заранее благодарим за понимание и с нетерпением ждём встречи с вами!</p>
+                <div class="wish-card">
+                    <div class="wish-icon">
+                        <i class="fas fa-plane"></i>
                     </div>
-                    <i class="fas fa-heart"></i>
+                    <div class="wish-text">
+                        <p>Лучшим подарком для нас станет ваш вклад в наше свадебное путешествие и обустройство семейного очага</p>
+                    </div>
                 </div>
                 
-                <div class="wishes-button">
-                    <a href="#" class="gift-link" id="giftSubscriptionLink">
-                        <i class="fas fa-leaf"></i> Подарить подписку
-                        <i class="fas fa-arrow-right"></i>
-                    </a>
+                <div class="wish-card">
+                    <div class="wish-icon">
+                        <i class="fas fa-flower"></i>
+                    </div>
+                    <div class="wish-text">
+                        <p>Если вы соберётесь подарить цветы — то лучше сделайте это нам в подписке. Мы не успеем насладиться их красотой, а подписка позволит продлить ещё на чуть дольше ощущение от праздника.</p>
+                    </div>
                 </div>
+                
+                <div class="wish-card">
+                    <div class="wish-icon">
+                        <i class="fas fa-baby-carriage"></i>
+                    </div>
+                    <div class="wish-text">
+                        <p>Мы очень любим детей, но формат нашего праздника, к сожалению, не позволит разделить его с маленькими гостями. Заранее благодарим за понимание и с нетерпением ждём встречи с вами!</p>
+                    </div>
+                </div>
+                
+                <div class="wish-card">
+                    <div class="wish-icon">
+                        <i class="fas fa-heart"></i>
+                    </div>
+                    <div class="wish-text">
+                        <p>Главное — ваше присутствие и тёплые слова! Мы будем рады любому знаку внимания</p>
+                    </div>
+                </div>
+                
+                <div class="wish-card">
+                    <div class="wish-icon">
+                        <i class="fas fa-champagne-glasses"></i>
+                    </div>
+                    <div class="wish-text">
+                        <p>Разделите с нами этот день — это лучший подарок, который мы можем получить</p>
+                    </div>
+                </div>
+                
             </div>
-        </section>
+        </div>
+        
+        <!-- Стрелки навигации -->
+        <!-- <div class="scroll-arrows">
+            <button class="scroll-arrow scroll-left" id="scrollLeftBtn">
+                <i class="fas fa-chevron-left"></i>
+            </button>
+            <button class="scroll-arrow scroll-right" id="scrollRightBtn">
+                <i class="fas fa-chevron-right"></i>
+            </button>
+        </div> -->
+        
+        <!-- Кнопка подписки под текстом о подписке -->
+        <div class="wishes-button">
+            <a href="https://roz-buket.ru/kopilka-chayko-kuzmina" target="_blank" class="gift-link" id="giftSubscriptionLink">
+                <i class="fas fa-leaf"></i> Подарить подписку
+                <i class="fas fa-arrow-right"></i>
+            </a>
+        </div>
+    </div>
+</section>
 
                 <!-- Календарь (05.jpg растворяется в 04.jpg) -->
         <section class="calendar-section section-bg" 
@@ -209,45 +256,78 @@
         </section> -->
 
         <!-- Форма подтверждения (06.jpg растворяется в 05.jpg) -->
-        <section class="rsvp section-bg" 
-                 style="--bg-image: url('04.jpg'); --prev-bg-image: url('06.jpg');">
-            <div class="rsvp-content">
-                <h2><i class="far fa-check-circle"></i> Подтвердите, пожалуйста</h2>
-                <p class="rsvp-intro">Мы будем очень рады видеть Вас на нашем торджестве! </p>
+<!-- Форма подтверждения -->
+<section class="rsvp section-bg" 
+         style="--bg-image: url('04.jpg'); --prev-bg-image: url('06.jpg');">
+    <div class="rsvp-content">
+        <h2><i class="far fa-check-circle"></i> Подтвердите, пожалуйста</h2>
+        <p class="rsvp-intro">Мы будем очень рады видеть Вас на нашем торжестве!</p>
+        
+        <form id="rsvpForm">
+            <div class="form-row">
+                <div class="form-group">
+                    <input type="text" id="name" placeholder="Ваше имя" required>
+                </div>
                 
-                <form id="rsvpForm">
-                    <div class="form-row">
-                        <div class="form-group">
-                            <input type="text" id="name" placeholder="Ваше имя" required>
-                        </div>
-                        
-                        <div class="form-group">
-                            <select id="attendance" required>
-                                <option value="" disabled selected>Присутствие</option>
-                                <option value="yes">С радостью буду</option>
-                                <option value="plusone">Буду с парой</option>
-                                <option value="family">Придём семьёй</option>
-                                <option value="no">К сожалению, не смогу</option>
-                            </select>
-                        </div>
-                    </div>
-                    
-                    <div class="form-group">
-                        <textarea id="message" placeholder="Ваши пожелания или особые предпочтения..." rows="3"></textarea>
-                    </div>
-                    
-                    <div class="form-note">
-                        <p><i class="fas fa-info-circle"></i> Пожалуйста, ответьте до 1 августа 2024 года</p>
-                    </div>
-                    
-                    <button type="submit" class="submit-btn">
-                        <i class="far fa-paper-plane"></i> Отправить ответ
-                    </button>
-                </form>
-                
-                <div id="formMessage" class="form-message"></div>
+                <div class="form-group">
+                    <select id="attendance" required>
+                        <option value="" disabled selected>Присутствие</option>
+                        <option value="yes">С радостью буду</option>
+                        <option value="plusone">Буду с парой</option>
+                        <option value="family">Придём семьёй</option>
+                        <option value="no">К сожалению, не смогу</option>
+                    </select>
+                </div>
             </div>
-        </section>
+            
+            <!-- НОВЫЙ БЛОК: Предпочтения по алкоголю -->
+            <div class="form-group">
+                <label style="display: block; margin-bottom: 0.8rem; font-weight: 500; color: #4a5345;">
+                    <i class="fas fa-wine-bottle"></i> Ваши предпочтения по алкоголю:
+                </label>
+                <div class="alcohol-options">
+                    <label class="alcohol-checkbox">
+                        <input type="checkbox" name="alcohol" value="white_wine">
+                        <span><i class="fas fa-wine-glass-alt"></i> Белое вино</span>
+                    </label>
+                    <label class="alcohol-checkbox">
+                        <input type="checkbox" name="alcohol" value="red_wine">
+                        <span><i class="fas fa-wine-glass"></i> Красное вино</span>
+                    </label>
+                    <label class="alcohol-checkbox">
+                        <input type="checkbox" name="alcohol" value="cognac">
+                        <span><i class="fas fa-glass-cheers"></i> Коньяк</span>
+                    </label>
+                    <label class="alcohol-checkbox">
+                        <input type="checkbox" name="alcohol" value="vodka">
+                        <span><i class="fas fa-glass-whiskey"></i> Водка</span>
+                    </label>
+                    <label class="alcohol-checkbox">
+                        <input type="checkbox" name="alcohol" value="none">
+                        <span><i class="fas fa-leaf"></i> Не пью алкоголь</span>
+                    </label>
+                </div>
+                <small style="display: block; margin-top: 0.5rem; color: #768b7a; font-size: 0.85rem;">
+                    <i class="fas fa-info-circle"></i> Можно выбрать несколько вариантов
+                </small>
+            </div>
+            
+            <div class="form-group">
+                <textarea id="message" placeholder="Ваши пожелания или особые предпочтения..." rows="3"></textarea>
+            </div>
+            
+            <div class="form-note">
+                <p><i class="fas fa-info-circle"></i> Пожалуйста, ответьте до 1 августа 2024 года</p>
+            </div>
+            
+            <button type="submit" class="submit-btn">
+                <i class="far fa-paper-plane"></i> Отправить ответ
+            </button>
+        </form>
+        
+        <div id="formMessage" class="form-message"></div>
+    </div>
+</section>
 
         <!-- Контакты с таким же плавным переходом -->
         <section class="contacts section-bg" 
@@ -263,7 +343,7 @@
                         </div>
                         <div class="contact-info">
                             <h3>Дарья</h3>
-                            <p>«По всем вопросам, связанным с мероприятием, вы можете обратиться к нашему координатору»</p>
+                            <!-- <p>«По всем вопросам, связанным с мероприятием, вы можете обратиться к нашему координатору»</p> -->
                             <p class="phone">+7 (983) 290-78-93</p>
                         </div>
                     </div>
@@ -285,7 +365,8 @@
         <!-- Футер -->
         <footer>
             <div class="footer-content">
-                <p class="footer-quote">"Любовь — это когда две половинки находят друг друга и становятся одним целым"</p>
+                <p class="footer-quote">«Величайшее из всего, чему ты можешь научиться в этом мире —
+любить и быть любимым».</p>
                 <div class="footer-names">
                     <div class="name">Антон</div>
                     <div class="heart"><i class="fas fa-heart"></i></div>
