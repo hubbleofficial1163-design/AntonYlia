@@ -49,11 +49,17 @@ body {
 
 .names {
     font-family: 'Playfair Display', serif;
-    font-size: clamp(2rem, 5vw, 2.8rem);
+    font-size: clamp(2rem, 5vw, 3.5rem);
     font-weight: 500;
     letter-spacing: 1px;
     margin-bottom: 1.5rem;
     text-shadow: 1px 1px 3px rgba(255, 255, 255, 0.7);
+}
+
+@media (max-width: 767px) {
+    .names {
+        font-size: 2.7rem !important; /* Принудительный размер */
+    }
 }
 
 .ampersand {
@@ -1154,42 +1160,42 @@ footer {
 
 /* Индивидуальные настройки для каждой иконки */
 .img-sbor {
-    right: 500px;
+    right: 470px;
     width: 80px;
     height: 80px;
 }
 
 .img-banket {
-    right: 390px;
+    right: 370px;
     width: 65px;
     height: 65px;
 }
 
 .img-dance {
-    right: 420px;
+    right: 400px;
     width: 90px;
     height: 90px;
 }
 
 .img-tort {
-    right: 420px;
+    right: 400px;
     width: 70px;
     height: 70px;
 }
 
 .img-tanec {
-    right: 350px;
+    right: 320px;
     width: 75px;
     height: 75px;
 }
 
 /* Мобильная версия */
 @media (max-width: 600px) {
-    .img-sbor { right: 150px; width: 65px; height: 65px; }
-    .img-banket { right: 60px; width: 50px; height: 50px; }
-    .img-dance { right: 100px; width: 65px; height: 65px; }
-    .img-tort { right: 110px; width: 55px; height: 55px; }
-    .img-tanec { right: 40px; width: 55px; height: 55px; }
+    .img-sbor { right: 140px; width: 65px; height: 65px; }
+    .img-banket { right: 40px; width: 50px; height: 50px; }
+    .img-dance { right: 80px; width: 65px; height: 65px; }
+    .img-tort { right: 90px; width: 55px; height: 55px; }
+    .img-tanec { right: 20px; width: 55px; height: 55px; }
 }
 
 
@@ -1561,3 +1567,370 @@ textarea:focus,
 * {
     -webkit-tap-highlight-color: transparent;
 }
+
+
+/* ========== ОТДЕЛЬНЫЙ БЛОК ПРО ЦВЕТЫ ========== */
+.flowers-block {
+    background: rgba(255, 255, 255, 0.95);
+    border-radius: 20px;
+    padding: 2rem 1.8rem;
+    margin: 1.5rem 0 0;
+    border: 1px solid rgba(135, 157, 144, 0.3);
+    text-align: center;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+}
+
+.flowers-icon {
+    width: 70px;
+    height: 70px;
+    background: linear-gradient(135deg, rgba(135, 157, 144, 0.2), rgba(162, 172, 148, 0.2));
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 1.2rem;
+}
+
+.flowers-icon i {
+    font-size: 2rem;
+    color: #637257;
+}
+
+.flowers-text p {
+    font-size: clamp(1rem, 2.5vw, 1.2rem);
+    line-height: 1.6;
+    color: #4a5345;
+    margin-bottom: 1.5rem;
+    font-style: italic;
+}
+
+.flowers-button {
+    margin-top: 0.5rem;
+}
+
+@media (max-width: 600px) {
+    .flowers-block {
+        padding: 1.5rem 1.2rem;
+    }
+    
+    .flowers-icon {
+        width: 55px;
+        height: 55px;
+    }
+    
+    .flowers-icon i {
+        font-size: 1.5rem;
+    }
+}
+
+/* ========== ПРЕДПОЧТЕНИЯ ПО ЕДЕ ========== */
+.food-options {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin-top: 0.5rem;
+}
+
+.food-checkbox {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    background: rgba(255, 255, 255, 0.8);
+    padding: 0.6rem 1rem;
+    border-radius: 50px;
+    border: 1px solid rgba(180, 189, 170, 0.5);
+    transition: all 0.3s;
+}
+
+.food-checkbox:hover {
+    background: rgba(135, 157, 144, 0.1);
+    border-color: #879d90;
+}
+
+/* Скрываем стандартный чекбокс */
+.food-checkbox input {
+    position: absolute;
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+/* Создаём кастомный чекбокс */
+.food-checkbox span {
+    position: relative;
+    padding-left: 28px;
+    font-size: clamp(0.9rem, 2.2vw, 1rem);
+    color: #4a5345;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.food-checkbox span i {
+    color: #879d90;
+    font-size: 0.9rem;
+}
+
+/* Кастомный квадратик */
+.food-checkbox span::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 18px;
+    height: 18px;
+    border: 2px solid #a2ac94;
+    border-radius: 4px;
+    background: white;
+    transition: all 0.2s;
+}
+
+/* Галочка при выборе */
+.food-checkbox input:checked + span::before {
+    background: #879d90;
+    border-color: #879d90;
+}
+
+.food-checkbox input:checked + span::after {
+    content: '✓';
+    position: absolute;
+    left: 4px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: white;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+/* Фокус для доступности */
+.food-checkbox input:focus + span::before {
+    box-shadow: 0 0 0 2px rgba(135, 157, 144, 0.3);
+}
+
+/* При выборе подсвечиваем */
+.food-checkbox:has(input:checked) {
+    background: rgba(135, 157, 144, 0.15);
+    border-color: #879d90;
+}
+
+/* Контейнер для поля "Другое" */
+.other-input-container {
+    margin-top: 0.8rem;
+}
+
+.other-input-container input,
+.other-input-container textarea {
+    background: rgba(255, 255, 255, 0.95);
+    border: 1px solid rgba(180, 189, 170, 0.7);
+    border-radius: 8px;
+    padding: 10px 12px;
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1rem;
+    color: #4a5345;
+}
+
+.other-input-container input:focus,
+.other-input-container textarea:focus {
+    outline: none;
+    border-color: #879d90;
+    box-shadow: 0 0 0 2px rgba(135, 157, 144, 0.2);
+}
+
+@media (max-width: 600px) {
+    .food-options {
+        gap: 0.7rem;
+    }
+    
+    .food-checkbox {
+        padding: 0.5rem 0.8rem;
+    }
+    
+    .food-checkbox span {
+        padding-left: 24px;
+    }
+    
+    .food-checkbox span::before {
+        width: 16px;
+        height: 16px;
+    }
+}
+
+/* ========== ДРЕСС-КОД ========== */
+.dresscode-content {
+    background-color: rgba(255, 255, 255, 0.9);
+    backdrop-filter: blur(5px);
+    padding: clamp(1.5rem, 4vw, 2.5rem);
+    width: 100%;
+    max-width: 750px;
+    margin: 40px auto 0;
+    border-radius: 10px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+    position: relative;
+    z-index: 1;
+    text-align: center;
+}
+
+.dresscode-intro {
+    font-size: clamp(1rem, 2.5vw, 1.2rem);
+    color: #4a5345;
+    margin-bottom: 2rem;
+    text-shadow: 0 1px 1px rgba(255, 255, 255, 0.7);
+}
+
+/* Цветовая палитра - кружки */
+.color-palette {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1.5rem;
+    margin-bottom: 2rem;
+}
+
+.color-circle {
+    width: clamp(80px, 15vw, 110px);
+    height: clamp(80px, 15vw, 110px);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s;
+    cursor: pointer;
+    position: relative;
+    border: 3px solid rgba(255, 255, 255, 0.8);
+}
+
+.color-circle:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+}
+
+.color-label {
+    position: absolute;
+    bottom: -30px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: clamp(0.7rem, 2vw, 0.85rem);
+    color: #4a5345;
+    white-space: nowrap;
+    background: rgba(255, 255, 255, 0.8);
+    padding: 2px 8px;
+    border-radius: 20px;
+    font-family: 'Cormorant Garamond', serif;
+    font-weight: 500;
+}
+
+/* Рекомендации по дресс-коду */
+.dresscode-guidelines {
+    margin: 2.5rem 0 1.5rem;
+    text-align: left;
+}
+
+.dresscode-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 15px;
+    margin-bottom: 1.5rem;
+    padding: 1rem;
+    background: rgba(212, 215, 200, 0.2);
+    border-radius: 12px;
+    transition: all 0.3s;
+}
+
+.dresscode-item:hover {
+    background: rgba(212, 215, 200, 0.4);
+    transform: translateX(5px);
+}
+
+.dresscode-item i {
+    font-size: 1.8rem;
+    color: #879d90;
+    min-width: 45px;
+    text-align: center;
+    margin-top: 5px;
+}
+
+.dresscode-text h4 {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(1.1rem, 2.8vw, 1.3rem);
+    color: #4a5345;
+    margin-bottom: 0.3rem;
+}
+
+.dresscode-text p {
+    font-size: clamp(0.95rem, 2.2vw, 1.05rem);
+    color: #4a5345;
+    margin: 0;
+    line-height: 1.5;
+}
+
+.dresscode-note {
+    background-color: rgba(212, 215, 200, 0.3);
+    border-radius: 10px;
+    padding: 1rem;
+    margin-top: 1.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    font-size: clamp(0.85rem, 2vw, 0.95rem);
+    color: #4a5345;
+    text-align: center;
+}
+
+.dresscode-note i {
+    color: #879d90;
+    font-size: 1.2rem;
+}
+
+.dresscode-note p {
+    margin: 0;
+}
+
+/* Адаптив для мобильных */
+@media (max-width: 600px) {
+    .color-palette {
+        gap: 1rem;
+    }
+    
+    .color-circle {
+        width: clamp(70px, 20vw, 90px);
+        height: clamp(70px, 20vw, 90px);
+    }
+    
+    .color-label {
+        bottom: -25px;
+        font-size: 0.7rem;
+        white-space: normal;
+        text-align: center;
+        max-width: 80px;
+    }
+    
+    .dresscode-item {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+    
+    .dresscode-item i {
+        margin-bottom: 5px;
+    }
+    
+    .dresscode-note {
+        flex-direction: column;
+    }
+}
+
+@media (max-width: 480px) {
+    .color-circle {
+        width: 65px;
+        height: 65px;
+    }
+    
+    .color-label {
+        font-size: 0.65rem;
+        max-width: 70px;
+    }
+}
+
