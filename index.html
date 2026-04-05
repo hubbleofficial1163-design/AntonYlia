@@ -95,7 +95,7 @@
                 <div class="timeline-item">
                     <div class="timeline-time">22:00</div>
                     <div class="timeline-content">
-                        <h3>Завершение вечера и танцы</h3>
+                        <h3>Завершение программы и танцы</h3>
                         <p>К сожалению, даже такие <br> радостные дни подходят к концу</p>
                     </div>
                     <img src="tanec2.png" alt="Танцы" class="timeline-img img-tanec">
@@ -207,60 +207,36 @@
 
 
         <!-- Дресс-код -->
+<!-- Дресс-код -->
 <section class="dresscode-section section-bg" 
          style="--bg-image: url('06.jpg'); --prev-bg-image: url('05.jpg');">
     <div class="dresscode-content">
         <h2><i class="fas fa-user-tie"></i> Дресс-код</h2>
         <p class="dresscode-intro">Мы будем рады, если вы поддержите цветовую гамму нашего праздника</p>
         
-        <!-- Цветовые кружки -->
-        <div class="color-palette">
-            <div class="color-circle" style="background-color: #8FBC8F;" title="Мятный">
-                <!-- <span class="color-label">Мятный</span> -->
-            </div>
-            <div class="color-circle" style="background-color: #D4E6C3;" title="Светло-зелёный">
-                <!-- <span class="color-label">Светло-зелёный</span> -->
-            </div>
-            <div class="color-circle" style="background-color: #F5E6D3;" title="Бежевый">
-                <!-- <span class="color-label">Бежевый</span> -->
-            </div>
-            <div class="color-circle" style="background-color: #FFF8DC;" title="Кремовый">
-                <!-- <span class="color-label">Кремовый</span> -->
-            </div>
-            <div class="color-circle" style="background-color: #E8F0E0;" title="Пастельно-зелёный">
-                <!-- <span class="color-label">Пастельно-зелёный</span> -->
+        <!-- Для женщин -->
+        <div class="dresscode-gender">
+            <h3 class="gender-title"><i class="fas fa-female"></i> Для женщин</h3>
+            <div class="color-palette">
+                <div class="color-circle" style="background-color: #FFF8F0;" title="Молочно-белый"></div>
+                <div class="color-circle" style="background-color: #F5E6D3;" title="Бежевый"></div>
+                <div class="color-circle" style="background-color: #6B2D5C;" title="Пурпурный"></div>
+                <div class="color-circle" style="background-color: #8B5A2B;" title="Коричневый"></div>
+                <div class="color-circle" style="background-color: #4A7C59;" title="Зелёный"></div>
             </div>
         </div>
         
-        <!-- Рекомендации по дресс-коду -->
-        <!-- <div class="dresscode-guidelines">
-            <div class="dresscode-item">
-                <i class="fas fa-female"></i>
-                <div class="dresscode-text">
-                    <h4>Для дам</h4>
-                    <p>Элегантные платья, комбинезоны или костюмы в пастельных тонах</p>
-                </div>
-            </div>
-            <div class="dresscode-item">
-                <i class="fas fa-male"></i>
-                <div class="dresscode-text">
-                    <h4>Для мужчин</h4>
-                    <p>Костюмы светлых оттенков, рубашки пастельных цветов</p>
-                </div>
-            </div>
-            <div class="dresscode-item">
-                <i class="fas fa-tshirt"></i>
-                <div class="dresscode-text">
-                    <h4>Аксессуары</h4>
-                    <p>Приветствуются цветочные принты и нежные украшения</p>
-                </div>
+        <!-- Для мужчин -->
+        <div class="dresscode-gender">
+            <h3 class="gender-title"><i class="fas fa-male"></i> Для мужчин</h3>
+            <div class="color-palette">
+                <div class="color-circle" style="background-color: #1A1A1A;" title="Чёрный"></div>
+                <div class="color-circle" style="background-color: #FFFFFF; border: 1px solid #ddd;" title="Белый"></div>
+                <div class="color-circle" style="background-color: #8B5A2B;" title="Коричневый"></div>
+                <div class="color-circle" style="background-color: #808080;" title="Серый"></div>
+                <div class="color-circle" style="background-color: #F5E6D3;" title="Бежевый"></div>
             </div>
         </div>
-        
-        <div class="dresscode-note">
-            <i class="fas fa-info-circle"></i>
-            <p>Главное — ваш комфорт и хорошее настроение! Мы будем рады видеть вас в любом наряде</p>
-        </div> -->
     </div>
 </section>
 
@@ -270,7 +246,17 @@
                  style="--bg-image: url('04.jpg'); --prev-bg-image: url('05.jpg');">
             <div class="location-content">
                 <h2><i class="fas fa-map-marker-alt"></i> Локация</h2>
-                <p class="location-address">Судостроительная ул., 117 а, г. Красноярск</p>
+                <p class="location-address">Судостроительная ул., 117 А, <br> г. Красноярск</p>
+                <p class="location-name">Сибирский сафари клуб</p>
+
+<div class="location-map-link">
+    <a href="https://2gis.ru/krasnoyarsk/geo/985690699465455/92.845419,55.989379" 
+       target="_blank" 
+       class="map-button">
+        <i class="fas fa-map-marked-alt"></i> Показать на карте
+        <i class="fas fa-external-link-alt"></i>
+    </a>
+</div>
                 <div class="location-map">
                     <img src="loc.webp" alt="Карта места проведения" class="location-img">
                 </div>
@@ -339,31 +325,31 @@
                 <div class="alcohol-options">
                     <label class="alcohol-checkbox">
                         <input type="checkbox" name="alcohol" value="white_wine">
-                        <span><i class="fas fa-wine-glass-alt"></i> Белое вино</span>
+                        <span>Белое вино</span>
                     </label>
                     <label class="alcohol-checkbox">
                         <input type="checkbox" name="alcohol" value="red_wine">
-                        <span><i class="fas fa-wine-glass"></i> Красное вино</span>
+                        <span>Красное вино</span>
                     </label>
                     <label class="alcohol-checkbox">
                         <input type="checkbox" name="alcohol" value="champagne">
-                        <span><i class="fas fa-glass-cheers"></i> Шампанское</span>
+                        <span>Шампанское</span>
                     </label>
                     <label class="alcohol-checkbox">
                         <input type="checkbox" name="alcohol" value="cognac">
-                        <span><i class="fas fa-brandy"></i> Коньяк</span>
+                        <span>Коньяк</span>
                     </label>
                     <label class="alcohol-checkbox">
                         <input type="checkbox" name="alcohol" value="vodka">
-                        <span><i class="fas fa-glass-whiskey"></i> Водка</span>
+                        <span>Водка</span>
                     </label>
                     <label class="alcohol-checkbox">
                         <input type="checkbox" name="alcohol" value="none">
-                        <span><i class="fas fa-leaf"></i> Не пью алкоголь</span>
+                        <span>Не пью алкоголь</span>
                     </label>
                     <label class="alcohol-checkbox alcohol-other">
                         <input type="checkbox" name="alcohol" value="other" id="alcoholOtherCheckbox">
-                        <span><i class="fas fa-plus-circle"></i> Другое</span>
+                        <span>Другое</span>
                     </label>
                 </div>
                 <div class="other-input-container" id="alcoholOtherContainer" style="display: none; margin-top: 0.8rem;">
@@ -382,15 +368,15 @@
                 <div class="food-options">
                     <label class="food-checkbox">
                         <input type="checkbox" name="food" value="no_meat">
-                        <span><i class="fas fa-carrot"></i> Не ем мясо</span>
+                        <span>Не ем мясо</span>
                     </label>
                     <label class="food-checkbox">
                         <input type="checkbox" name="food" value="no_fish">
-                        <span><i class="fas fa-fish"></i> Не ем рыбу</span>
+                        <span>Не ем рыбу</span>
                     </label>
                     <label class="food-checkbox food-other">
                         <input type="checkbox" name="food" value="other" id="foodOtherCheckbox">
-                        <span><i class="fas fa-pen"></i> Другие особенности</span>
+                        <span>Другие особенности</span>
                     </label>
                 </div>
                 <div class="other-input-container" id="foodOtherContainer" style="display: none; margin-top: 0.8rem;">
