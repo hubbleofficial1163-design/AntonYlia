@@ -104,7 +104,7 @@ document.addEventListener('DOMContentLoaded', function() {
     // ========== ОТПРАВКА ФОРМЫ В GOOGLE SHEETS ==========
     
     // ВАШ URL ОТ APPS SCRIPT - ЗАМЕНИТЕ НА РЕАЛЬНЫЙ
-    const SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbwVpBBzM9TfOAq7WZEt9d5lwPwn1fsRavP61fJIK4YDNDLYp3umj5URb9qSplOuD4jc/exec';
+    const SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbyHX_YiqyhOgr3m1YSdnDVkKCxdIJACYFrO9Fp0_Xd-gacj9AwLTIgJZwE7uqH1OwFM/exec';
     
     // Функция показа уведомлений
     function showNotification(message, isError = false) {
