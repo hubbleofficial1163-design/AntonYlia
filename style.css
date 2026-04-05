@@ -1184,7 +1184,7 @@ footer {
 }
 
 .img-tanec {
-    right: 320px;
+    right: 290px;
     width: 75px;
     height: 75px;
 }
@@ -1932,5 +1932,65 @@ textarea:focus,
         font-size: 0.65rem;
         max-width: 70px;
     }
+}
+
+.location-name {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(1.1rem, 3vw, 1.3rem);
+    color: #637257;
+    margin: -0.5rem 0 1.2rem 0;
+    font-weight: 500;
+}
+
+.location-map-link {
+    margin: 1.2rem 0;
+    text-align: center;
+}
+
+.map-button {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: linear-gradient(to right, #a2ac94, #879d90);
+    color: white;
+    padding: 10px 24px;
+    border-radius: 50px;
+    text-decoration: none;
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(0.95rem, 2.5vw, 1.1rem);
+    font-weight: 500;
+    transition: all 0.3s;
+    border: none;
+    cursor: pointer;
+}
+
+.map-button:hover {
+    background: linear-gradient(to right, #879d90, #768b7a);
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(99, 114, 87, 0.2);
+}
+
+/* Сдвигаем стрелку select левее на мобильных */
+@media (max-width: 767px) {
+    select {
+        background-position: right 20px center !important;
+        -webkit-appearance: none;
+        appearance: none;
+        background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="%23879d90" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>');
+        background-repeat: no-repeat;
+        background-size: 14px;
+        padding-right: 40px;
+    }
+}
+
+/* Сдвигаем стрелку select левее */
+select {
+    background-position: right 20px center !important;
+    -webkit-appearance: none;
+    appearance: none;
+    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="%23879d90" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>');
+    background-repeat: no-repeat;
+    background-size: 14px;
+    padding-right: 45px;
 }
 
