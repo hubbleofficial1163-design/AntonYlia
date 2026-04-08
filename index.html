@@ -9,6 +9,59 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600&family=Marck+Script&family=Playfair+Display:wght@400;500&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <style>
+    /* ЧЕРНЫЙ ТЕКСТ ДЛЯ ВСЕГО САЙТА */
+    html, body, body * {
+        color: #000000 !important;
+    }
+    
+    /* Возвращаем цвет иконкам */
+    i, .fas, .far, .fab, [class*="fa-"], 
+    i:before, .fas:before, .far:before, .fab:before,
+    [class*="fa-"]:before {
+        color: #637257 !important;
+    }
+    
+    /* Белые иконки на кнопках */
+    button i, .submit-btn i, .gift-link i, .map-button i,
+    button .fas, .submit-btn .fas, .gift-link .fas, .map-button .fas,
+    .scroll-arrow i, .calendar-nav i,
+    button i:before, .submit-btn i:before {
+        color: #ffffff !important;
+    }
+    
+    /* Текст на кнопках - белый */
+    button, .submit-btn, .gift-link, .map-button,
+    button span, .submit-btn span, .gift-link span, .map-button span,
+    button * , .submit-btn *, .gift-link *, .map-button * {
+        color: #ffffff !important;
+    }
+    
+    /* Сердечки и декоративные иконки */
+    .fa-heart, .heart i, .fa-heart:before {
+        color: #879d90 !important;
+    }
+    
+    /* Кастомные чекбоксы */
+    .alcohol-checkbox span::before,
+    .food-checkbox span::before {
+        border-color: #a2ac94 !important;
+    }
+    
+    /* Плейсхолдеры в формах */
+    ::placeholder, input::placeholder, textarea::placeholder {
+        color: #666666 !important;
+        opacity: 1 !important;
+    }
+    
+    /* Текст в полях ввода */
+    input, select, textarea, 
+    input * , select * , textarea * {
+        color: #000000 !important;
+        background-color: #ffffff !important;
+    }
+</style>
 </head>
 <body>
     <!-- Главное фото с лепестками (02.jpg) -->
@@ -95,10 +148,19 @@
                 <div class="timeline-item">
                     <div class="timeline-time">22:00</div>
                     <div class="timeline-content">
-                        <h3>Завершение программы и танцы</h3>
+                        <h3>Завершение программы</h3>
                         <p>К сожалению, даже такие <br> радостные дни подходят к концу</p>
                     </div>
                     <img src="tanec2.png" alt="Танцы" class="timeline-img img-tanec">
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-time">22:00 - 00:00</div>
+                    <div class="timeline-content">
+                        <h3>Танцуют все!</h3>
+                        <p>Вечерние танци</p>
+                    </div>
+                    <img src="dance.png" alt="Танцы" class="timeline-img img-dance">
                 </div>
             </div>
         </section>
